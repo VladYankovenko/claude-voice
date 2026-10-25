@@ -1,0 +1,15 @@
+{
+  "default": "1.7-base",
+  "presets": {
+    "1.7-base": {
+      "id": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16",
+      "sizeGb": 4.3,
+      "note": "Best quality, ~10 GB peak. Clone only."
+    },
+    "0.6-base": {
+      "id": "mlx-community/Qwen3-TTS-12Hz-0.6B-Base-bf16",
+      "sizeGb": 2.3,
+      "note": "About twice as fast, ~4 GB peak. Clone only."
+    }
+  }
+}

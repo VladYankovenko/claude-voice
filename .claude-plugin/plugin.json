@@ -1,0 +1,86 @@
+{
+  "name": "voice-brief",
+  "version": "0.1.0",
+  "description": "Speaks one short <say> line per assistant message through a local streaming TTS daemon.",
+  "hooks": "./hooks/hooks.json",
+  "userConfig": {
+    "engine": {
+      "type": "string",
+      "title": "TTS engine",
+      "description": "mlx streams PCM from a local HTTP server; system falls back to macOS say.",
+      "default": "mlx",
+      "options": [
+        "mlx",
+        "system"
+      ]
+    },
+    "ttsUrl": {
+      "type": "string",
+      "title": "Local TTS base URL",
+      "description": "Base URL of the mlx-audio server.",
+      "default": "http://127.0.0.1:8011"
+    },
+    "sampleRate": {
+      "type": "string",
+      "title": "PCM sample rate",
+      "description": "Sample rate of the engine's raw PCM output; must match the server.",
+      "default": "24000"
+    },
+    "refAudio": {
+      "type": "string",
+      "title": "Reference wav",
+      "description": "none uses the bundled stable voice, or an absolute path to your own wav to clone.",
+      "default": "none"
+    },
+    "refText": {
+      "type": "string",
+      "title": "Reference transcript",
+      "description": "Transcript of your reference wav. The bundled voice carries its own, so leave it as none unless you clone.",
+      "default": "none"
+    },
+    "autostart": {
+      "type": "string",
+      "title": "Start TTS server",
+      "description": "Start the local mlx-audio server on session start when it is not running (1) or leave it alone (0).",
+      "default": "1",
+      "options": [
+        "1",
+        "0"
+      ]
+    },
+    "modelPreset": {
+      "type": "string",
+      "title": "Model preset",
+      "description": "Qwen3-TTS base model; both are cloning models.",
+      "default": "1.7-base",
+      "options": [
+        "1.7-base",
+        "0.6-base"
+      ]
+    },
+    "language": {
+      "type": "string",
+      "title": "Spoken language",
+      "description": "auto follows the language of your messages. Used for notification phrases and for the synthesis language code.",
+      "default": "auto",
+      "options": [
+        "auto",
+        "russian",
+        "english"
+      ]
+    },
+    "announceProject": {
+      "type": "string",
+      "title": "Announce the project",
+      "description": "Prefix a phrase with the project name when a different session speaks. 1 on, 0 off.",
+      "default": "1",
+      "options": [
+        "1",
+        "0"
+      ]
+    }
+  },
+  "author": {
+    "name": "Vlad Yankovenko"
+  }
+}
