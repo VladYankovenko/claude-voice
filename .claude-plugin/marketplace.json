@@ -1,0 +1,14 @@
+{
+  "name": "voice-brief-local",
+  "owner": {
+    "name": "Vlad Yankovenko"
+  },
+  "description": "Local marketplace holding the voice-brief plugin.",
+  "plugins": [
+    {
+      "name": "voice-brief",
+      "source": "./",
+      "description": "Speaks one short <say> line per assistant message through a local streaming TTS daemon."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+.DS_Store
+*.log
+node_modules/
+.env
+.env.*
+.claude-plugin/types/
+app/.build/
+app/build/
+app/Resources/python/
